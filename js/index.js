@@ -17,15 +17,18 @@ window.addEventListener("pageshow", function(event){
 function a(e){
   var n= (e.keyCode?e.keyCode : e.which);
   //13 is the keycode value or ascii value of Enter
+  var r = document.getElementById("search").value;
   if(n==13){
-    getDat();
+    if(r!==""){
+      getDat();
+    }else{
+      alert("Search field is empty");
+    }
   }
 }
 
 //function to get data from search box
 function getDat(){
-  console.log("2");
-
   document.getElementById("scrolling-wrapper").innerHTML = null;
   html="";
   var r = document.getElementById("search").value;
