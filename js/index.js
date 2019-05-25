@@ -7,9 +7,12 @@ var html="";
 window.addEventListener("pageshow", function(event){
   var histTrav=event.persisted || ( typeof window.performance != "undefined" && window.performance.navigation.type === 2 );
   if(histTrav){
-    var v = document.getElementById("scrolling-wrapper");
-    console.log("1");
-    getDat();
+    var r = document.getElementById("search").value;
+    if(r!==""){
+        getDat();
+      }else{
+        currLoc();
+      }
   }
 });
 
@@ -32,7 +35,11 @@ function getDat(){
   document.getElementById("scrolling-wrapper").innerHTML = null;
   html="";
   var r = document.getElementById("search").value;
-  search(r);
+  if(r!==""){
+      search(r);
+    }else{
+      alert("Search field is empty");
+    }
 
 }
 
@@ -95,7 +102,7 @@ function country(x){
   window.location="country.html";
 }
 
-//
+//Extra function to get data of current country you are in
 async function currLoc(){
   var x = document.getElementById("scrolling-wrapper");
   x.innerHTML = null;

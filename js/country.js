@@ -26,7 +26,7 @@ function pager(){
   document.getElementById("capital").innerHTML ="Capital: "+country[0].capital;
   document.getElementById("popu").innerHTML ="Population: "+country[0].population;
   document.getElementById("region").innerHTML ="Region: "+country[0].region;
-  document.getElementById("subregion").innerHTML ="Region: "+country[0].subregion;
+  document.getElementById("subregion").innerHTML ="Sub-Region: "+country[0].subregion;
   document.getElementById("currencies").innerHTML ="Currencies: "+country[0].currencies.map(c=> `${c.name} (${c.code})`).join(", ");
   document.getElementById("lang").innerHTML ="Major Languages Spoken: "+country[0].languages.map(l=> `${l.name}`).join(", ");
 }
