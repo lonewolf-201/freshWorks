@@ -1,0 +1,95 @@
+body{
+  background-color: #1f1f1f;
+  color: #FFFFFF;
+}
+header{
+  margin: auto;
+}
+button{
+  background-color: #1f1f1f;
+  border: 2px solid #76FF00;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+button:hover{
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  color: #1f1f1f;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: bold;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+#search{
+  width: 400px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.btn{
+  position: relative;
+  display: inline-block;
+  width: 32;
+  height: 32;
+  vertical-align: middle;
+}
+.btn .tool {
+  visibility: hidden;
+  width: 220px;
+  background-color: #1f1f1f;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  top: -5px;
+  left: 105%;
+}
+.btn .tool::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+}
+
+.btn:hover .tool {
+  visibility: visible;
+  opacity: 1;
+}
+.card{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.8);
+  transition: 0.3s;
+  width: 190px;
+  height: 260px;
+}
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.8);
+}
+.column {
+  margin-left:5px;
+  float: left;
+  width: 200px;
+  height: 270px;
+}
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+.container{
+  margin-left: 10px;
+}
+.roger{
+  margin-top: 30px;
+}
